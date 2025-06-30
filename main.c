@@ -31,7 +31,7 @@ int main(void) {
     int client_fd = accept(tcp_socket, 0, 0); // fd meaning file descriptor
     
     char buffer[256] = {0};
-    recv(tcp_socket, buffer, 256, 0);
+    recv(client_fd, buffer, 256, 0);
 
     // request will look something like:
     // GET /file.html ......
